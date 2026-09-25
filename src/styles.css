@@ -82,7 +82,8 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .field span { color: var(--muted); font-size: .72rem; margin-bottom: 3px; }
 .field input { width: 100%; color: var(--ink); border: 0; background: transparent; font-weight: 700; outline: none; }
 .field-button { width: 100%; height: 100%; border: 0; background: transparent; text-align: left; align-items: flex-start; }
-.swap-button { align-self: center; width: 36px; height: 36px; border: 0; border-radius: 50%; color: var(--violet); background: var(--lavender); }
+.city-field:first-child { border-right: 0; }
+.swap-button { display: grid; place-items: center; align-self: center; justify-self: center; width: 36px; height: 36px; border: 0; border-radius: 50%; color: var(--violet); background: var(--lavender); }
 .search-submit { min-height: 58px; border-radius: 14px; }
 .passenger-wrap { position: relative; }
 .popover { position: absolute; z-index: 20; top: calc(100% + 12px); right: 0; width: 290px; padding: 18px; border-radius: 18px; background: #fff; box-shadow: var(--shadow); }
