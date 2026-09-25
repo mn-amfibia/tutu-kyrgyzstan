@@ -82,7 +82,7 @@ export function Programs({ currency, t, onAlert, onResults, onRepeat }: Programs
     <>
       <section className="section frequent-section" id="frequent"><div className="container">
         <div className="section-head"><span className="eyebrow">Smart repeat</span><h2>{t('frequentTitle')}</h2></div>
-        <article className="frequent-card"><div><small>{t('savedExample')}</small><h3>Бишкек <span>→</span> Москва</h3><p>1 взрослый · эконом · {formatMoney(14220, currency)} · ≈ {secondaryMoney(14220, currency)}</p></div>
+        <article className="frequent-card"><div><h3>Бишкек <span>→</span> Москва</h3><p>1 взрослый · эконом · {formatMoney(14220, currency)} · ≈ {secondaryMoney(14220, currency)}</p></div>
           <div className="action-grid"><button onClick={onRepeat}><RefreshCw />{t('repeat')}</button><button onClick={() => { document.getElementById('top')?.scrollIntoView(); toggleSaved('dates') }}><Ticket />{t('editDates')}</button><button onClick={onAlert}><Bell />{t('watchPrice')}</button><button onClick={() => toggleSaved('passengers')}><Users />{saved.includes('passengers') ? t('saved') : t('savePassengers')}</button><button onClick={() => toggleSaved('return')}><Bell />{saved.includes('return') ? t('saved') : t('remindReturn')}</button></div>
         </article>
       </div></section>
