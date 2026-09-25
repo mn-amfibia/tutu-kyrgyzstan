@@ -32,7 +32,7 @@ export function Hero({ search, loading, onChange, onSearch, t }: HeroProps) {
           <h1>{t('heroTitle')}</h1>
           <p>{t('heroText')}</p>
         </div>
-        <img className="hero-asset" src="./brand/suitcase.png" alt="" aria-hidden="true" />
+        <img className="hero-asset" src={`${import.meta.env.BASE_URL}brand/suitcase.png`} alt="" aria-hidden="true" />
 
         <form className="search-card" onSubmit={(event) => { event.preventDefault(); onSearch() }}>
           <div className="search-fields">

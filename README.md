@@ -26,6 +26,10 @@ npm run preview
 
 ## GitHub Pages
 
-Vite использует относительный `base: './'`, поэтому содержимое папки `dist` можно публиковать как статический сайт через GitHub Pages.
+Сайт публикуется по адресу https://mn-amfibia.github.io/tutu-kyrgyzstan/.
+
+Workflow `.github/workflows/deploy.yml` запускается после push в `main`: выполняет `npm ci`, `npm run build` и публикует папку `dist`. В `vite.config.ts` задан `base: '/tutu-kyrgyzstan/'`.
+
+Для первой публикации в настройках репозитория откройте Settings → Pages и выберите Source: GitHub Actions.
 
 Фирменные ассеты в `public/brand` скопированы из `references`; исходные референсы не изменены.

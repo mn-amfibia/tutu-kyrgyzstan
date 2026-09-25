@@ -194,7 +194,7 @@ export function SearchResults({ route, flights, filters, onFilters, sort, onSort
           <aside className="filters-desktop"><FilterPanel filters={filters} onChange={onFilters} count={filtered.length} t={t} /></aside>
           <div className="flight-list">
             {filtered.length ? filtered.map((flight) => <FlightCard key={flight.id} flight={flight} currency={currency} onChoose={setSelected} t={t} />) :
-              <div className="empty-state"><img src="./brand/boarding-pass.png" alt="" /><h3>{t('noResults')}</h3><div className="button-row"><button className="button" onClick={() => onFilters(defaultFilters)}>{t('reset')}</button><button className="button secondary" onClick={onChangeSearch}>{t('changeSearch')}</button></div></div>}
+              <div className="empty-state"><img src={`${import.meta.env.BASE_URL}brand/boarding-pass.png`} alt="" /><h3>{t('noResults')}</h3><div className="button-row"><button className="button" onClick={() => onFilters(defaultFilters)}>{t('reset')}</button><button className="button secondary" onClick={onChangeSearch}>{t('changeSearch')}</button></div></div>}
           </div>
         </div>
       </div>

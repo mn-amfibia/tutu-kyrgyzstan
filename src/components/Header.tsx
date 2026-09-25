@@ -23,7 +23,7 @@ export function Header({ language, currency, onLanguage, onCurrency, t }: Header
     <header className="header">
       <div className="container header-inner">
         <a href="#top" aria-label="Туту" className="logo-link">
-          <img src="./brand/logo.svg" alt="Туту" className="logo" />
+          <img src={`${import.meta.env.BASE_URL}brand/logo.svg`} alt="Туту" className="logo" />
         </a>
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`} aria-label="Основная навигация">
           <a href="#contact">{t('help')}</a>

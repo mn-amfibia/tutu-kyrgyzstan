@@ -92,7 +92,7 @@ export function Programs({ currency, t, onAlert, onResults, onRepeat }: Programs
           <ul><li>Персональные предложения</li><li>Ранние уведомления о снижении цены</li><li>Бесплатная бронь на 24 часа</li><li>Бонусы за повторные покупки</li><li>Гибкие условия обмена или возврата</li><li>Сохранённые пассажиры</li></ul>
           <div className="button-row"><button className="button gold-button" onClick={() => toggleSaved('route')}>{saved.includes('route') ? t('routeSaved') : t('saveRoute')}</button><button className="button secondary-dark" onClick={onResults}>{t('viewOffers')}</button><button className="link-light" onClick={onAlert}>{t('watchPrice')}</button></div>
           <small>{formatMoney(14220, currency)} · ≈ {secondaryMoney(14220, currency)}</small>
-        </div><img src="./brand/trophy.png" alt="" aria-hidden="true" />
+        </div><img src={`${import.meta.env.BASE_URL}brand/trophy.png`} alt="" aria-hidden="true" />
       </div></section>
 
       <section className="section"><div className="container loyalty-grid">
@@ -102,7 +102,7 @@ export function Programs({ currency, t, onAlert, onResults, onRepeat }: Programs
 
       <section className="section group-section"><div className="container group-card">
         <div><span className="eyebrow">Tutu Teams</span><h2>{t('groupTitle')}</h2><p>{t('groupText')}</p><div className="feature-list"><span><CircleCheck />Персональный промокод</span><span><CircleCheck />Сохранённые пассажиры</span><span><CircleCheck />Помощь при групповой покупке</span><span><CircleCheck />Бонусы за поездки</span></div><button className="button" onClick={() => setGroupOpen(true)}>{t('join')}</button></div>
-        <img src="./brand/suitcase.png" alt="" aria-hidden="true" />
+        <img src={`${import.meta.env.BASE_URL}brand/suitcase.png`} alt="" aria-hidden="true" />
       </div></section>
 
       <Modal open={groupOpen} title={t('groupTitle')} onClose={() => { setGroupOpen(false); setGroupDone(false) }}>
@@ -152,14 +152,14 @@ export function TrustContactFaq({ language, t }: { language: Language; t: Transl
   return (
     <>
       <section className="section trust-section"><div className="container trust-card">
-        <img src="./brand/boarding-pass.png" alt="" aria-hidden="true" /><div><span className="eyebrow">23 года рядом</span><h2>{t('trustTitle')}</h2><div className="trust-grid"><span><ShieldCheck />{t('trustYears')}</span><span><Headphones />{t('trustSupport')}</span><span><RefreshCw />{t('trustConditions')}</span><span><CreditCard />{t('trustCheck')}</span></div></div>
+        <img src={`${import.meta.env.BASE_URL}brand/boarding-pass.png`} alt="" aria-hidden="true" /><div><span className="eyebrow">23 года рядом</span><h2>{t('trustTitle')}</h2><div className="trust-grid"><span><ShieldCheck />{t('trustYears')}</span><span><Headphones />{t('trustSupport')}</span><span><RefreshCw />{t('trustConditions')}</span><span><CreditCard />{t('trustCheck')}</span></div></div>
       </div></section>
-      <section className="section contact-section" id="contact"><div className="container contact-card"><div><span className="eyebrow">{t('support')}</span><h2>{t('contactTitle')}</h2><p>{t('contactText')}</p><button className="button">{t('goHelp')}</button></div><img src="./brand/boarding-pass.png" alt="" /></div></section>
+      <section className="section contact-section" id="contact"><div className="container contact-card"><div><span className="eyebrow">{t('support')}</span><h2>{t('contactTitle')}</h2><p>{t('contactText')}</p><button className="button">{t('goHelp')}</button></div><img src={`${import.meta.env.BASE_URL}brand/boarding-pass.png`} alt="" /></div></section>
       <section className="section faq-section"><div className="container"><div className="section-head"><span className="eyebrow">FAQ</span><h2>{t('faq')}</h2></div><div className="faq-list">{questions.map(([question, answer], index) => <div className={`faq-item ${open === index ? 'open' : ''}`} key={question}><button aria-expanded={open === index} onClick={() => setOpen(open === index ? null : index)}><span>{question}</span><ChevronDown /></button>{open === index && <p>{answer}</p>}</div>)}</div></div></section>
     </>
   )
 }
 
 export function Footer({ t }: { t: Translator }) {
-  return <footer className="footer"><div className="container footer-grid"><div className="footer-brand"><img src="./brand/logo.svg" alt="Туту" /><p>Кыргызстан ↔ Россия</p></div><div><strong>{t('company')}</strong><a>{t('about')}</a><a>{t('vacancies')}</a><a>{t('contacts')}</a><a>{t('news')}</a></div><div><strong>{t('travelers')}</strong><a>{t('support')}</a><a>{t('feedback')}</a><a>{t('legal')}</a></div><div><strong>{t('partners')}</strong><a>{t('becomePartner')}</a><a>{t('legal')}</a></div></div><div className="container concept-note">{t('concept')}</div></footer>
+  return <footer className="footer"><div className="container footer-grid"><div className="footer-brand"><img src={`${import.meta.env.BASE_URL}brand/logo.svg`} alt="Туту" /><p>Кыргызстан ↔ Россия</p></div><div><strong>{t('company')}</strong><a>{t('about')}</a><a>{t('vacancies')}</a><a>{t('contacts')}</a><a>{t('news')}</a></div><div><strong>{t('travelers')}</strong><a>{t('support')}</a><a>{t('feedback')}</a><a>{t('legal')}</a></div><div><strong>{t('partners')}</strong><a>{t('becomePartner')}</a><a>{t('legal')}</a></div></div><div className="container concept-note">{t('concept')}</div></footer>
 }
