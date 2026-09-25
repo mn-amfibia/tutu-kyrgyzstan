@@ -2,7 +2,7 @@ import type { Language } from './types'
 
 const ru = {
   help: 'Справочная', favorites: 'Избранное', signIn: 'Войти', menu: 'Меню',
-  heroTitle: 'Авиабилеты между Кыргызстаном и Россией',
+  heroTitle: 'Летай выгодно в обе\u00A0стороны',
   heroText: 'Сравнивайте итоговые цены, оплачивайте удобной картой и выбирайте гибкие условия поездки',
   from: 'Откуда', to: 'Куда', there: 'Туда', back: 'Обратно', passengers: 'Пассажиры',
   find: 'Найти авиабилеты',
@@ -72,7 +72,7 @@ const ru = {
 const ky: typeof ru = {
   ...ru,
   help: 'Маалымдама', favorites: 'Тандалгандар', signIn: 'Кирүү', menu: 'Меню',
-  heroTitle: 'Кыргызстан менен Россиянын ортосундагы авиабилеттер',
+  heroTitle: 'Эки тарапка тең пайдалуу уч',
   heroText: 'Жыйынтык бааларды салыштырып, ыңгайлуу карта менен төлөп, ийкемдүү шарттарды тандаңыз',
   from: 'Кайдан', to: 'Кайда', there: 'Баруу', back: 'Кайтуу', passengers: 'Жүргүнчүлөр', find: 'Авиабилеттерди табуу',
   adults: 'Чоңдор', children: 'Балдар', infants: 'Ымыркайлар', done: 'Даяр',
@@ -108,7 +108,7 @@ const ky: typeof ru = {
 const en: typeof ru = {
   ...ru,
   help: 'Help', favorites: 'Favorites', signIn: 'Sign in', menu: 'Menu',
-  heroTitle: 'Flights between Kyrgyzstan and Russia', heroText: 'Compare final prices, pay with a convenient card, and choose flexible travel terms',
+  heroTitle: 'Fly smart both ways', heroText: 'Compare final prices, pay with a convenient card, and choose flexible travel terms',
   from: 'From', to: 'To', there: 'Departure', back: 'Return', passengers: 'Passengers', find: 'Find flights',
   adults: 'Adults', children: 'Children', infants: 'Infants', done: 'Done',
   benefit1: 'Final price including fees', benefit2: 'Prices in rubles and soms', benefit3: 'Kyrgyz bank cards accepted', benefit4: 'Terms visible before checkout',
