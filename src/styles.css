@@ -56,8 +56,8 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 /* Header */
 .header { position: sticky; top: 0; z-index: 50; color: #fff; background: rgba(13, 11, 104, .96); backdrop-filter: blur(16px); }
 .header-inner { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-.logo-link { display: block; width: 115px; height: 34px; overflow: hidden; }
-.logo { width: 126px; height: 34px; object-fit: contain; object-position: left center; }
+.logo-link { display: block; flex: 0 0 auto; height: 34px; }
+.logo { display: block; width: auto; height: 34px; }
 .nav { display: flex; align-items: center; gap: 22px; font-size: .88rem; font-weight: 700; }
 .nav a { display: flex; gap: 6px; align-items: center; opacity: .9; }
 .nav a:hover { opacity: 1; color: #cbc9ff; }
