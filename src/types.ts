@@ -14,7 +14,6 @@ export interface SearchState {
   to: string
   departureDate: string
   returnDate: string
-  unknownReturn: boolean
   passengers: Passengers
 }
 
