@@ -57,9 +57,9 @@ export function Hero({ search, loading, onChange, onSearch, t }: HeroProps) {
               <span>{t('there')}</span>
               <input type="date" value={search.departureDate} onChange={(event) => onChange({ ...search, departureDate: event.target.value })} />
             </label>
-            <label className={`field ${search.unknownReturn ? 'disabled' : ''}`}>
+            <label className="field">
               <span>{t('back')}</span>
-              <input type="date" disabled={search.unknownReturn} value={search.returnDate} onChange={(event) => onChange({ ...search, returnDate: event.target.value })} />
+              <input type="date" value={search.returnDate} onChange={(event) => onChange({ ...search, returnDate: event.target.value })} />
             </label>
             <div className="passenger-wrap">
               <button type="button" className="field field-button" onClick={() => setPassengersOpen(!passengersOpen)} aria-expanded={passengersOpen}>
@@ -79,10 +79,6 @@ export function Hero({ search, loading, onChange, onSearch, t }: HeroProps) {
             </div>
             <button className="button search-submit" disabled={loading}>{loading ? t('loading') : t('find')}</button>
           </div>
-          <label className="unknown-return">
-            <input type="checkbox" checked={search.unknownReturn} onChange={(event) => onChange({ ...search, unknownReturn: event.target.checked })} />
-            <span><strong>{t('unknownReturn')}</strong>{search.unknownReturn && <small>{t('unknownHint')}</small>}</span>
-          </label>
         </form>
 
         <div className="benefit-row">

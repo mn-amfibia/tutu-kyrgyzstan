@@ -16,7 +16,6 @@ const initialSearch: SearchState = {
   to: 'Москва',
   departureDate: '2026-10-14',
   returnDate: '2026-10-27',
-  unknownReturn: false,
   passengers: { adults: 1, children: 0, infants: 0 },
 }
 
