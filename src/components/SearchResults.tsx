@@ -105,6 +105,8 @@ function FlightCard({ flight, currency, onChoose, t }: FlightCardProps) {
 
 function FlightDetails({ flight, currency, t, onClose }: { flight: Flight; currency: Currency; t: Translator; onClose: () => void }) {
   const [status, setStatus] = useState<'idle' | 'checking' | 'confirmed' | 'changed'>('idle')
+  const changedAmount = currency === 'KGS' ? '632 сом (620 ₽)' : '620 ₽ (≈ 632 сом)'
+  const changedMessage = t('changed').replace(/620 ₽|₽620/, changedAmount)
   const verify = () => {
     setStatus('checking')
     window.setTimeout(() => setStatus(flight.priceChanged ? 'changed' : 'confirmed'), 800)
@@ -135,7 +137,7 @@ function FlightDetails({ flight, currency, t, onClose }: { flight: Flight; curre
         {status === 'checking' && <button className="button" disabled><span className="spinner" /> {t('checking')}</button>}
       </div>
       {status === 'confirmed' && <div className="status-message success"><Check /> <div><strong>{t('confirmed')}</strong><span>{t('checkAvailability')}</span></div></div>}
-      {status === 'changed' && <div className="status-message warning"><InfoIcon /><div><strong>{t('changed')}</strong><span>{t('changedWhy')}</span><div className="button-row"><button className="button">{t('continueNew')}</button><button className="button secondary" onClick={onClose}>{t('similar')}</button></div></div></div>}
+      {status === 'changed' && <div className="status-message warning"><InfoIcon /><div><strong>{changedMessage}</strong><span>{t('changedWhy')}</span><div className="button-row"><button className="button">{t('continueNew')}</button><button className="button secondary" onClick={onClose}>{t('similar')}</button></div></div></div>}
     </Modal>
   )
 }
