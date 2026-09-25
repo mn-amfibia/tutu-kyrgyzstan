@@ -83,7 +83,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .field input { width: 100%; color: var(--ink); border: 0; background: transparent; font-weight: 700; outline: none; }
 .field-button { width: 100%; height: 100%; border: 0; background: transparent; text-align: left; align-items: flex-start; }
 .city-field:first-child { border-right: 0; }
-.swap-button { display: grid; place-items: center; align-self: center; justify-self: center; width: 36px; height: 36px; border: 0; border-radius: 50%; color: var(--violet); background: var(--lavender); }
+.swap-button { display: grid; place-items: center; align-self: center; justify-self: center; width: 36px; height: 36px; border: 0; border-radius: 50%; color: var(--violet); background: var(--lavender); transform: translateX(-16px); }
 .search-submit { min-height: 58px; border-radius: 14px; }
 .passenger-wrap { position: relative; }
 .popover { position: absolute; z-index: 20; top: calc(100% + 12px); right: 0; width: 290px; padding: 18px; border-radius: 18px; background: #fff; box-shadow: var(--shadow); }
@@ -335,7 +335,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   .field:nth-of-type(4) { grid-column: 2 / 4; }
   .passenger-wrap { grid-column: 1 / 4; }
   .city-field { grid-column: auto; }
-  .swap-button { grid-column: 2; grid-row: 1; }
+  .swap-button { grid-column: 2; grid-row: 1; transform: none; }
   .search-submit { grid-column: 1 / 4; margin-top: 8px; }
   .passenger-popover { left: 0; right: auto; width: 100%; }
   .benefit-row { grid-template-columns: 1fr 1fr; }
