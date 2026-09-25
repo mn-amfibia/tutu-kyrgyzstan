@@ -72,7 +72,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .hero-copy { width: min(780px, 78%); }
 .hero-copy .eyebrow { color: #cbc9ff; }
 .hero-copy p { max-width: 690px; color: #dcdcff; font-size: 1.16rem; }
-.hero-asset { position: absolute; width: 470px; right: -80px; top: -130px; filter: drop-shadow(0 30px 60px rgba(0,0,0,.28)); transform: rotate(7deg); }
+.hero-asset { position: absolute; width: 540px; right: -100px; top: -150px; filter: drop-shadow(0 30px 60px rgba(0,0,0,.28)); transform: rotate(7deg); }
 .hero-orb { position: absolute; border-radius: 999px; filter: blur(5px); opacity: .25; }
 .hero-orb-one { width: 350px; height: 350px; right: 2%; top: -20%; background: var(--magenta); }
 .hero-orb-two { width: 260px; height: 260px; left: -100px; bottom: -100px; background: var(--blue); }
@@ -195,9 +195,9 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .action-grid button { display: flex; align-items: center; gap: 7px; padding: 12px; border: 0; border-radius: 12px; background: var(--lavender); color: var(--navy); text-align: left; font-size: .76rem; font-weight: 700; }
 .action-grid svg { color: var(--violet); width: 17px; }
 .golden-section { padding-top: 30px; }
-.golden-card { position: relative; display: grid; grid-template-columns: 1fr 350px; min-height: 530px; padding: 54px; overflow: hidden; color: #fff; border-radius: 32px; background: linear-gradient(135deg, #1c174c, #0d0b68 70%); }
+.golden-card { position: relative; display: grid; grid-template-columns: 1fr 420px; min-height: 530px; padding: 54px; overflow: hidden; color: #fff; border-radius: 32px; background: linear-gradient(135deg, #1c174c, #0d0b68 70%); }
 .golden-card::before { content: ""; position: absolute; width: 400px; height: 400px; right: -100px; top: -100px; border-radius: 50%; background: rgba(230,184,62,.16); }
-.golden-card img { position: relative; z-index: 1; align-self: center; width: 380px; filter: drop-shadow(0 25px 40px rgba(0,0,0,.35)); transform: rotate(7deg); }
+.golden-card img { position: relative; z-index: 1; align-self: center; justify-self: center; width: 540px; max-width: none; margin: -70px -80px; filter: drop-shadow(0 25px 40px rgba(0,0,0,.35)); transform: rotate(7deg); }
 .golden-copy { position: relative; z-index: 2; max-width: 660px; }
 .golden-label { display: inline-flex; align-items: center; gap: 7px; padding: 7px 11px; border-radius: 999px; background: rgba(230,184,62,.16); color: #f2d989; font-weight: 700; font-size: .78rem; }
 .golden-card h2 { margin-top: 20px; }
@@ -218,22 +218,24 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .mechanic-grid > div { display: flex; flex-direction: column; gap: 35px; background: var(--lavender); }
 .mechanic-grid svg { color: var(--violet); }
 .group-section { background: #edefff; }
-.group-card { display: grid; grid-template-columns: 1fr 360px; align-items: center; gap: 30px; }
+.group-section { overflow: hidden; }
+.group-card { display: grid; grid-template-columns: 1fr 440px; align-items: center; gap: 30px; }
 .group-card > div { max-width: 700px; }
-.group-card > img { width: 380px; height: 380px; object-fit: contain; filter: drop-shadow(0 25px 35px rgba(13,11,104,.18)); }
+.group-card > img { justify-self: center; width: 540px; max-width: none; height: 540px; margin: -80px -50px; object-fit: contain; filter: drop-shadow(0 25px 35px rgba(13,11,104,.18)); }
 .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 23px 0; }
 .feature-list span { display: flex; align-items: center; gap: 8px; font-weight: 700; }
 .feature-list svg { color: var(--green); width: 18px; }
-.trust-card { display: grid; grid-template-columns: 300px 1fr; align-items: center; gap: 50px; }
-.trust-card > img { width: 290px; height: 260px; object-fit: contain; }
+.trust-section { overflow: hidden; }
+.trust-card { display: grid; grid-template-columns: 380px 1fr; align-items: center; gap: 50px; }
+.trust-card > img { justify-self: center; width: 460px; max-width: none; height: 420px; margin: -80px -40px; object-fit: contain; }
 .trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
 .trust-grid span { display: flex; align-items: center; gap: 10px; padding: 16px; border-radius: 15px; background: #fff; font-weight: 700; box-shadow: 0 4px 18px rgba(13,11,104,.05); }
 .trust-grid svg { color: var(--violet); }
 .contact-section { padding-top: 20px; }
-.contact-card { display: grid; grid-template-columns: 1fr 300px; align-items: center; min-height: 290px; overflow: hidden; padding: 42px; color: #fff; border-radius: 28px; background: #2d2552; }
+.contact-card { display: grid; grid-template-columns: 1fr 380px; align-items: center; min-height: 290px; overflow: hidden; padding: 42px; color: #fff; border-radius: 28px; background: #2d2552; }
 .contact-card .eyebrow { color: #f69af1; }
 .contact-card > div { max-width: 700px; }
-.contact-card img { width: 300px; height: 260px; object-fit: contain; transform: rotate(-8deg); }
+.contact-card img { justify-self: center; width: 460px; max-width: none; height: 420px; margin: -100px -40px; object-fit: contain; transform: rotate(-8deg); }
 
 /* FAQ, footer, modal */
 .faq-list { max-width: 900px; }
@@ -293,7 +295,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 @media (max-width: 1020px) {
   .nav { gap: 12px; }
   .nav > a { display: none; }
-  .hero-asset { width: 360px; right: -90px; }
+  .hero-asset { width: 400px; right: -100px; }
   .search-fields { grid-template-columns: 1fr 42px 1fr 1fr; }
   .search-submit { grid-column: 4 / 5; margin-top: 8px; }
   .passenger-wrap { grid-column: 2 / 4; }
@@ -303,10 +305,14 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   .flight-main { grid-template-columns: 1fr; }
   .flight-price { align-items: flex-start; padding: 16px 0 0; margin-top: 16px; border-left: 0; border-top: 1px solid #ececf1; }
   .flight-price .button { width: auto; }
-  .golden-card { grid-template-columns: 1fr 250px; padding: 40px; }
-  .golden-card img { width: 300px; }
-  .group-card { grid-template-columns: 1fr 280px; }
-  .group-card > img { width: 280px; }
+  .golden-card { grid-template-columns: 1fr 280px; padding: 40px; }
+  .golden-card img { width: 400px; margin: -50px -60px; }
+  .group-card { grid-template-columns: 1fr 300px; }
+  .group-card > img { width: 400px; height: 400px; margin: -60px -50px; }
+  .trust-card { grid-template-columns: 300px 1fr; gap: 30px; }
+  .trust-card > img { width: 380px; height: 340px; margin: -60px -40px; }
+  .contact-card { grid-template-columns: 1fr 300px; }
+  .contact-card img { width: 380px; height: 340px; margin: -80px -40px; }
 }
 
 @media (max-width: 760px) {
@@ -358,7 +364,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   .frequent-card { grid-template-columns: 1fr; }
   .action-grid { grid-template-columns: 1fr 1fr; }
   .golden-card { display: block; padding: 30px 24px; }
-  .golden-card img { position: absolute; right: -80px; top: -30px; width: 230px; opacity: .35; }
+  .golden-card img { position: absolute; right: -90px; top: -40px; width: 300px; margin: 0; opacity: .35; }
   .golden-card ul { grid-template-columns: 1fr; }
   .loyalty-grid { grid-template-columns: 1fr; }
   .mechanic-grid { grid-template-columns: 1fr; }
@@ -367,7 +373,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   .group-card > img { display: none; }
   .feature-list { grid-template-columns: 1fr; }
   .trust-card { grid-template-columns: 1fr; gap: 10px; }
-  .trust-card > img { width: 180px; height: 130px; justify-self: center; }
+  .trust-card > img { width: 280px; height: 220px; margin: -30px 0 -20px; justify-self: center; }
   .trust-grid { grid-template-columns: 1fr; }
   .contact-card { grid-template-columns: 1fr; padding: 28px; }
   .contact-card img { display: none; }
