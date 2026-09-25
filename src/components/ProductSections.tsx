@@ -152,9 +152,9 @@ export function TrustContactFaq({ language, t }: { language: Language; t: Transl
   return (
     <>
       <section className="section trust-section"><div className="container trust-card">
-        <img src={`${import.meta.env.BASE_URL}brand/boarding-pass.png`} alt="" aria-hidden="true" /><div><span className="eyebrow">23 года рядом</span><h2>{t('trustTitle')}</h2><div className="trust-grid"><span><ShieldCheck />{t('trustYears')}</span><span><Headphones />{t('trustSupport')}</span><span><RefreshCw />{t('trustConditions')}</span><span><CreditCard />{t('trustCheck')}</span></div></div>
+        <div><span className="eyebrow">23 года рядом</span><h2>{t('trustTitle')}</h2><div className="trust-grid"><span><ShieldCheck />{t('trustYears')}</span><span><Headphones />{t('trustSupport')}</span><span><RefreshCw />{t('trustConditions')}</span><span><CreditCard />{t('trustCheck')}</span></div></div>
       </div></section>
-      <section className="section contact-section" id="contact"><div className="container contact-card"><div><span className="eyebrow">{t('support')}</span><h2>{t('contactTitle')}</h2><p>{t('contactText')}</p><button className="button">{t('goHelp')}</button></div><img src={`${import.meta.env.BASE_URL}brand/boarding-pass.png`} alt="" /></div></section>
+      <section className="section contact-section" id="contact"><div className="container contact-card"><div><h2>{t('contactTitle')}</h2><p>{t('contactText')}</p><button className="button">{t('goHelp')}</button></div><img src={`${import.meta.env.BASE_URL}brand/boarding-pass.png`} alt="" /></div></section>
       <section className="section faq-section"><div className="container"><div className="section-head"><span className="eyebrow">FAQ</span><h2>{t('faq')}</h2></div><div className="faq-list">{questions.map(([question, answer], index) => <div className={`faq-item ${open === index ? 'open' : ''}`} key={question}><button aria-expanded={open === index} onClick={() => setOpen(open === index ? null : index)}><span>{question}</span><ChevronDown /></button>{open === index && <p>{answer}</p>}</div>)}</div></div></section>
     </>
   )
