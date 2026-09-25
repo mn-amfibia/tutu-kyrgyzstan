@@ -45,7 +45,6 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 .button:hover { transform: translateY(-1px); box-shadow: 0 9px 20px rgba(129, 109, 255, .28); background: #715bea; }
 .button:active { transform: translateY(0); }
 .button:disabled { opacity: .68; cursor: wait; }
-.button-small { min-height: 38px; padding: 0 16px; border-radius: 11px; }
 .button-full { width: 100%; }
 .button.secondary { color: var(--violet); background: var(--lavender); }
 .button.secondary:hover { background: #e1ddff; box-shadow: none; }

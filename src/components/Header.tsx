@@ -42,7 +42,6 @@ export function Header({ language, currency, onLanguage, onCurrency, t }: Header
               </button>
             ))}
           </div>
-          <button className="button button-small">{t('signIn')}</button>
         </nav>
         <button className="mobile-menu" aria-label={t('menu')} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X /> : <Menu />}
